@@ -11,9 +11,19 @@ use Illuminate\Support\Facades\Auth;
 class ReviewController extends Controller
 {
     //
+    //ログイン状態でなければログイン画面に戻す
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function reviewInsert(Request $request)
     {
+        //バリデーション()
+        $input = $request->validate([
+            'recommend' => 'required | string',
+            'comment' => 'required | string'
+        ]);
         $data = [
             'record' => book::find($request->id)
         ];

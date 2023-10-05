@@ -8,7 +8,7 @@
 @endsection
 
 @section('main')
-<!--  -->
+<!-- ログイン画面 -->
 <h1>ログイン画面</h1>
     <form action="" method="post">
         @csrf

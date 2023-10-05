@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+    
     //
     /*public function showRegister ()
     {
@@ -78,6 +79,8 @@ class UserController extends Controller
         $input = $request->validate([
             'name' => 'required | string',
             'department_id' => 'integer | between:0,1',
+            'email' => 'required | email:filter',
+            'password' => 'required',
         ]);
 
         if($request['department_id'] == 0)

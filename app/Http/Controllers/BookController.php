@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Http;
 
 class BookController extends Controller
 {
+    //ログイン状態でなければログイン画面に戻す
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     //書籍登録画面へ遷移
     public function showbookRegister()
     {
@@ -18,6 +24,7 @@ class BookController extends Controller
     //書籍新規登録メソッド
     public function bookRegister(Request $request )
     {
+        //バリデーション(ISBNコードのみ)
         $input = $request->validate([
             'ISBN' => 'required | string'
         ]);
