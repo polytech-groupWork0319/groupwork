@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.header {
+    background-color: #000;
+    padding: 10px 0;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;  /* Ensures the header is above all other content */
+}
+
+.header__inner {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header__title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header__title a {
+    color: white;
+    text-decoration: none;
+   font-family: "Hiragino Mincho Pro", "Yu Mincho", "MS PMincho", serif;  /* Add this line */
+}
+
+.header__title a:hover {
+    text-decoration: underline;
+}
+
+.header__red {
+    color: red;
+}
+
+.header__white {
+    color: white;
+}
+
+.footer__nav a:hover {
+    text-decoration: underline;
+}
+
+.header__navgroup {
+    display: flex;
+    justify-content: flex-end;  /* Add this line to align items to the right */
+}
+
+.header__navitem {
+    margin-left: 20px;
+}
+
+.content {
+    padding-top: 100px;  /* Adjust this value to create the desired amount of space */
+    min-height: 500px;  /* Ensure there is space between header and footer */
+}
+
+.footer {
+    background-color: #000;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+.footer__nav {
+    margin-bottom: 10px;
+}
